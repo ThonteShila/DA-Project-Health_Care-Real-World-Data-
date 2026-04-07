@@ -25,3 +25,37 @@ Want to:
 1. Explore the data first?
 2. Focus on a specific objective (e.g., predicting readmissions)?
 3. Something else? 
+
+
+Insights=Medical condition=['Cancer', 'Obesity', 'Diabetes', 'Asthma', 'Hypertension', 'Arthritis']
+
+leavedays_codition.plot(kind='bar',x=df["Medical Condition"],y=df["Patient_leave_in_hospital"])
+In above graph number of days patient need to leave in hospital are almost similar for patient.
+
+sns.barplot(x=df["Medical Condition"],y=df["Billing Amount"])
+@insight-The bar plot above shows the relationship between medical conditions and billing amounts. 
+It indicates that certain medical conditions may be associated with higher billing amounts, 
+suggesting that they may require more intensive care or resources.
+ This insight can help healthcare providers identify which conditions are more costly and may require additional attention or 
+ resources to manage effectively.
+
+Leaving count according to gender
+sns.countplot(x=df["Medical Condition"],hue=df["Gender"])
+insights = "From the above graph, it can be observed that the distribution of medical conditions is similar for both genders."
+
+insight-Medication and medical condition
+Medication=['Paracetamol', 'Ibuprofen', 'Aspirin', 'Penicillin', 'Lipitor'],
+in above graph we can see that for all medical condition most of the patients are taking medication.
+Count of paracetmol,ibuprofen and Lipitor more than other medication.
+
+
+Acoording to age group billing amount
+insight - The billing amount is higher for the age group of 60-80 years.
+ This could be due to the fact that older patients may require more medical attention and treatment, leading to higher healthcare costs. 
+Additionally, older patients may have more chronic conditions that require ongoing care, which can also contribute to higher billing amounts.
+
+df["Insurance needed"].value_counts()
+Insurance needed
+Insurance required    28350
+Not Required          27150
+
